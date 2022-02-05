@@ -1,0 +1,20 @@
+- hosts: localhost
+  vars:
+  pre_tasks:
+  - name: Update Apt Packages
+    become: true
+    apt:
+      force_apt_get: true
+      update_cache: true
+      state: present
+    tags:
+      - imstall
+      - core
+
+  tasks:
+    - include: tasks/core.yml
+    - include: tasks/zsh.yml
+    # - include: tasks/ssh.yml
+    # - include: tasks/git.yml
+    # - include: tasks/nvim.yml
+    # - include: tasks/dotfiles.yml
