@@ -2,3 +2,16 @@
   become: true
   apt:
     name: ["build-essential", "cmake", "libpthread-stubs0-dev", "python3"]
+  tags:
+    - install
+    - core
+
+- name: Install nvim build dependencies
+  become: true
+  apt:
+    name: ["ninja-build", "gettext", "libtool", "libtool-bin", "autoconf",
+          "automake", "cmake", "g++", "pkg-config", "unzip", "curl", "doxygen"]
+  tags:
+    - install
+    - neovim
+    - core
