@@ -1,0 +1,4 @@
+- name: Install system packages
+  become: true
+  apt:
+    name: ["build-essential", "cmake", "libpthread-stubs0-dev", "python3"]
