@@ -15,10 +15,9 @@
   tags:
     - install
     - dotfiles
-    - stow
+
 - name: Stow dotfiles
   shell: cd $HOME/.dotfiles && make clean-install
   tags:
     - install
     - dotfiles
-    - stow

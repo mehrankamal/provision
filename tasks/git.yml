@@ -4,6 +4,7 @@
     scope: global
     value: "29648490+mehrankamal@users.noreply.github.com"
   tags:
+  - core
   - git-personal
 - name: GitHub personal setup name
   git_config:
@@ -11,4 +12,5 @@
     scope: global
     value: "Mehran Kamal"
   tags:
+  - core
   - git-personal

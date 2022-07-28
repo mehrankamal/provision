@@ -4,7 +4,7 @@
     name: ["build-essential", "cmake", "libpthread-stubs0-dev", "python3"]
   tags:
     - install
-    - core
+    - neovim
 
 - name: Install nvim build dependencies
   become: true
@@ -14,4 +14,3 @@
   tags:
     - install
     - neovim
-    - core

@@ -1,6 +1,6 @@
 - name: Install ZSH
   apt: name=zsh
-  tags: &zsh_task_tags [ 'install', 'productivity', 'dotfiles', 'zsh']
+  tags: &zsh_task_tags [ 'install', 'zsh']
 
 - name: Change shell to zsh
   shell: chsh -s $(which zsh)
