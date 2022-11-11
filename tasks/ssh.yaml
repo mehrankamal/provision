@@ -6,3 +6,26 @@
   tags:
     - full
     - ssh
+
+- name: Copy Github's private key
+  vars:
+    file_name: ".ssh/id_ed25519_gh"
+  ansible.builtin.copy:
+    src: "./{{ file_name }}"
+    dest: "{{ lookup('ansible.builtin.env', 'HOME') }}/{{ file_name }}"
+    mode: 0600
+  tags:
+    - full
+    - ssh
+
+- name: Copy Github's public key
+  vars:
+    file_name: ".ssh/id_ed25519_gh.pub"
+  ansible.builtin.copy:
+    src: "./{{ file_name }}"
+    dest: "{{ lookup('ansible.builtin.env', 'HOME') }}/{{ file_name }}"
+    mode: 0600
+  tags:
+    - full
+    - ssh
+
