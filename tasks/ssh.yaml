@@ -29,3 +29,12 @@
     - full
     - ssh
 
+- name: Add github.com as known host for ssh
+  ansible.builtin.known_hosts:
+    name: github.com
+    key: "{{ lookup('pipe', 'ssh-keyscan github.com') }}'"
+    state: present
+  tags:
+    - full
+    - ssh
+

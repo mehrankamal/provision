@@ -6,6 +6,8 @@
       - cmake
       - libpthread-stubs0-dev
       - python3
+      - git
+      - make
   tags:
     - full
     - core

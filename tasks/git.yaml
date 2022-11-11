@@ -1,0 +1,17 @@
+- name: Configure git global user.email
+  community.general.git_config:
+    name: user.email
+    scope: global
+    value: "29648490+mehrankamal@users.noreply.github.com"
+  tags:
+  - full
+  - git
+
+- name: Configure git global user.name
+  community.general.git_config:
+    name: user.name
+    scope: global
+    value: "Mehran Kamal"
+  tags:
+  - full
+  - git

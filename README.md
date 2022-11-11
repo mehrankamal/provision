@@ -15,8 +15,8 @@ Use with your own responsibility, it is not intended for public use. It has many
 - [x] Install core programs
   - [x] Python 3
   - [x] build-essentials
-- [ ] Install my ssh-keys for Github and Gitlab
-- [ ] Configure git information
+- [x] Install my ssh-keys for Github and Gitlab
+- [x] Configure git config
 - [ ] Install my .dotfiles
 - [ ] Install Rust lang
   - [ ] Install rust toolchain
