@@ -1,0 +1,11 @@
+- name: Install system packages
+  become: true
+  ansible.builtin.apt:
+    name:
+      - build-essential
+      - cmake
+      - libpthread-stubs0-dev
+      - python3
+  tags:
+    - full
+    - core
