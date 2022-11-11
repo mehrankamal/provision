@@ -12,10 +12,11 @@ Use with your own responsibility, it is not intended for public use. It has many
 ## Steps to a provisioning a computer:
 
 - [x] Update and upgrade apt
-- [ ] Install core programs
-  - [ ] Python 3
-  - [ ] build-essentials
+- [x] Install core programs
+  - [x] Python 3
+  - [x] build-essentials
 - [ ] Install my ssh-keys for Github and Gitlab
+- [ ] Configure git information
 - [ ] Install my .dotfiles
 - [ ] Install Rust lang
   - [ ] Install rust toolchain

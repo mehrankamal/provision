@@ -1,0 +1,8 @@
+- name: Ensure .ssh directory exists
+  ansible.builtin.file:
+    path: "{{ lookup('ansible.builtin.env', 'HOME') }}/.ssh"
+    state: directory
+    mode: 0700
+  tags:
+    - full
+    - ssh

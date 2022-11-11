@@ -2,7 +2,7 @@
   pre_tasks:
   - name: Update Apt Packages
     become: true
-    ansible.bultin.apt:
+    ansible.builtin.apt:
       force_apt_get: true
       update_cache: true
       state: present
@@ -12,11 +12,11 @@
 
   tasks:
   - include: tasks/core.yaml
+  - include: tasks/ssh.yaml
     #    - include: tasks/rust.yaml
     #    - include: tasks/go.yaml
     #    - include: tasks/haskell.yaml
     #    - include: tasks/docker.yaml
-    #    - include: tasks/ssh.yaml
     #    - include: tasks/git.yaml
     #    - include: tasks/dotfiles.yaml
     #    - include: tasks/nvim.yaml
