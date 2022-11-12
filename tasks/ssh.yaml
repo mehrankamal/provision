@@ -29,6 +29,18 @@
     - full
     - ssh
 
+- name: Copy ssh config
+  vars:
+    file_name: ".ssh/config"
+  ansible.builtin.copy:
+    src: "./{{ file_name }}"
+    dest: "{{ lookup('ansible.builtin.env', 'HOME') }}/{{ file_name }}"
+    mode: 0664
+  tags:
+    - full
+    - ssh
+
+
 - name: Add github.com as known host for ssh
   ansible.builtin.known_hosts:
     name: github.com

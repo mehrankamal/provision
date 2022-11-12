@@ -1,0 +1,17 @@
+- name: Clone .dotfiles repo
+  ansible.builtin.git:
+    repo: "git@github.com:mehrankamal/.dotfiles.git"
+    dest: "{{ lookup('ansible.builtin.env', 'HOME') }}/.dotfiles"
+  tags:
+    - full
+    - dotfiles
+
+- name: Stow dotfiles
+  ansible.builtin.shell: |
+    cd "{{ lookup('ansible.builtin.env', 'HOME') }}/.dotfiles/"
+    make clean-install
+  args:
+    executable: /bin/bash
+  tags:
+    - full
+    - dotfiles
