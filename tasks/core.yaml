@@ -8,6 +8,7 @@
       - python3
       - git
       - make
+      - curl
   tags:
     - full
     - core

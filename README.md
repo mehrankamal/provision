@@ -17,9 +17,9 @@ Use with your own responsibility, it is not intended for public use. It has many
   - [x] build-essentials
 - [x] Install my ssh-keys for Github and Gitlab
 - [x] Configure git config
-- [ ] Install my .dotfiles
-- [ ] Install Rust lang
-  - [ ] Install rust toolchain
+- [x] Install my .dotfiles
+- [x] Install Rust lang
+  - [x] Install rust toolchain
 - [ ] Install Golang
   - [ ] Install Go toolchain
 - [ ] Install Xmonad
