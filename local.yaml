@@ -1,4 +1,6 @@
 - hosts: localhost
+  vars:
+    GO_VERSION: "1.19.3"
   pre_tasks:
   - name: Update Apt Packages
     become: true
@@ -16,7 +18,7 @@
   - include: tasks/git.yaml
   - include: tasks/dotfiles.yaml
   - include: tasks/rust.yaml
-    #    - include: tasks/go.yaml
+  - include: tasks/go.yaml
     #    - include: tasks/haskell.yaml
     #    - include: tasks/docker.yaml
     #    - include: tasks/nvim.yaml

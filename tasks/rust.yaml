@@ -1,7 +1,26 @@
-- name: Install rust toolchain
-  ansible.builtin.shell: |
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+- name: Check if pervious installation found
+  shell: command -v cargo
+  register: cargo_exists
+  ignore_errors: yes
   tags:
     - full
-    - rust-lang
+    - rust
 
+
+- name: Download rustup.sh script
+  when: cargo_exists is failed
+  get_url:
+    url: https://sh.rustup.rs
+    dest: /tmp/sh.rustup.rs
+    mode: '0755'
+    force: 'yes'
+  tags:
+    - full
+    - rust
+
+- name: install rust/cargo
+  when: cargo_exists is failed
+  shell: /tmp/sh.rustup.rs -y
+  tags:
+    - full
+    - rust

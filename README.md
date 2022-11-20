@@ -3,7 +3,8 @@
 ## Runbook:
 
 1. Install ansible using the package manager
-2. For full installation use `ansible-playbook -t full local.yaml`
+3. Clone this repository
+2. For full installation use `ansible-playbook -t full --ask-become-pass --ask-vault-pass -vvvv local.yaml`
 
 ## Warning:
 
@@ -20,8 +21,8 @@ Use with your own responsibility, it is not intended for public use. It has many
 - [x] Install my .dotfiles
 - [x] Install Rust lang
   - [x] Install rust toolchain
-- [ ] Install Golang
-  - [ ] Install Go toolchain
+- [x] Install Golang
+  - [x] Install Go toolchain
 - [ ] Install Xmonad
   - [ ] Install Dependencies
   - [ ] Install Stack toolchain

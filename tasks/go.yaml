@@ -1,0 +1,48 @@
+- name: Check if go is already installed
+  shell: command -v go
+  register: go_exists
+  ignore_errors: yes
+  tags:
+    - full
+    - golang
+
+
+- name: Download Go archive
+  when: go_exists is failed
+  get_url:
+    url: "https://go.dev/dl/go{{ GO_VERSION }}.linux-amd64.tar.gz"
+    dest: "/tmp/go{{ GO_VERSION }}.linux-amd64.tar.gz"
+    mode: '0755'
+    checksum: sha256:74b9640724fd4e6bb0ed2a1bc44ae813a03f1e72a4c76253e2d5c015494430ba
+  tags:
+    - full
+    - golang
+
+- name: Delete installation if already exists
+  become: true
+  ansible.builtin.file:
+    path: /usr/local/go
+    state: absent
+  tags:
+    - full
+    - golang
+
+- name: Unarchive Go archive
+  when: go_exists is failed
+  become: true
+  ansible.builtin.unarchive:
+    src: "/tmp/go{{ GO_VERSION }}.linux-amd64.tar.gz"
+    dest: "/usr/local/"
+    remote_src: yes
+  tags:
+    - full
+    - golang
+
+- name: Add golang to path
+  when: go_exists is failed
+  ansible.builtin.lineinfile:
+    path: "{{ lookup('ansible.builtin.env', 'HOME') }}/.profile"
+    line: "export PATH=$PATH:/usr/local/go/bin"
+  tags:
+    - full
+    - golang
