@@ -19,7 +19,7 @@
   - include: tasks/dotfiles.yaml
   - include: tasks/rust.yaml
   - include: tasks/go.yaml
-    #    - include: tasks/haskell.yaml
+  - include: tasks/haskell.yaml
     #    - include: tasks/docker.yaml
     #    - include: tasks/nvim.yaml
     #    - include: tasks/apps.yaml

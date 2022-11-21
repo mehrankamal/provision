@@ -9,6 +9,18 @@
       - git
       - make
       - curl
+      - libffi-dev               ## Haskell Deps begin
+      - libffi8ubuntu1
+      - libgmp-dev
+      - libgmp10
+      - libncurses-dev
+      - libncurses5
+      - libtinfo5               ## Haskell Deps end
+      - libx11-dev              # XMonad Deps begin
+      - libxft-dev
+      - libxinerama-dev
+      - libxrandr-dev
+      - libxss-dev              # XMonad Deps end
   tags:
     - full
     - core

@@ -23,9 +23,10 @@ Use with your own responsibility, it is not intended for public use. It has many
   - [x] Install rust toolchain
 - [x] Install Golang
   - [x] Install Go toolchain
+- [x] Install Haskell
+  - [x] Install ghcup for managing Haskell Stack and Cabal
 - [ ] Install Xmonad
-  - [ ] Install Dependencies
-  - [ ] Install Stack toolchain
+  - [x] Install Dependencies
   - [ ] Install Xmonad
   - [ ] Set Xmonad to my Window Manager
 - [ ] Install nvim

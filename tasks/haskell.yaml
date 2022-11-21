@@ -1,0 +1,26 @@
+- name: Check if ghcup is already installed
+  shell: command -v ghc
+  register: ghcup_exists
+  ignore_errors: yes
+  tags:
+    - full
+    - haskell
+
+
+- name: Download installtion script for ghc
+  when: ghcup_exists is failed
+  get_url:
+    url: "https://get-ghcup.haskell.org"
+    dest: "/tmp/ghcup.sh"
+    mode: '0755'
+  tags:
+    - full
+    - haskell
+
+- name: Execute installtion
+  when: ghcup_exists is failed
+  ansible.builtin.shell: |
+    BOOTSTRAP_HASKELL_NONINTERACTIVE=1 /tmp/ghcup.sh
+  tags:
+    - full
+    - haskell
