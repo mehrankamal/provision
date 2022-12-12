@@ -22,7 +22,7 @@
   - include: tasks/haskell.yaml
     #    - include: tasks/docker.yaml
     #    - include: tasks/nvim.yaml
-    #    - include: tasks/apps.yaml
+  - include: tasks/apps.yaml
     #    - include: tasks/alacritty.yaml
     #    - include: tasks/zsh.yaml
     #

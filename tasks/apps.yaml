@@ -1,0 +1,9 @@
+- name: Install tmux
+  become: True
+  ansible.builtin.apt:
+    name:
+      - tmux
+  tags:
+    - full
+    - apps
+
