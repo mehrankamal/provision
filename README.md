@@ -4,7 +4,7 @@
 
 1. Install ansible using the package manager
 3. Clone this repository
-2. For full installation use `ansible-playbook -t full --ask-become-pass --ask-vault-pass -vvvv local.yaml`
+2. For full installation use `ansible-playbook -t full --ask-become-pass --ask-vault-pass -vvv local.yaml`
 
 ## Warning:
 
@@ -42,5 +42,5 @@ Use with your own responsibility, it is not intended for public use. It has many
   - [ ] Install zsh
   - [ ] set default shell to zsh
 - [ ] Install Docker
-- [ ] Install IntelliJ Toolbox
+- [x] Install IntelliJ Toolbox
 

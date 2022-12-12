@@ -27,3 +27,4 @@
     #    - include: tasks/alacritty.yaml
     #    - include: tasks/zsh.yaml
     #
+  - include: tasks/jetbrains.yaml

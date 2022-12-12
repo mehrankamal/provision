@@ -21,6 +21,7 @@
       - libxinerama-dev
       - libxrandr-dev
       - libxss-dev              # XMonad Deps end
+      - libfuse2                # Required for AppImage
   tags:
     - full
     - core
