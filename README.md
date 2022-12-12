@@ -25,10 +25,10 @@ Use with your own responsibility, it is not intended for public use. It has many
   - [x] Install Go toolchain
 - [x] Install Haskell
   - [x] Install ghcup for managing Haskell Stack and Cabal
-- [ ] Install Xmonad
+- [x] Install Xmonad
   - [x] Install Dependencies
   - [x] Install Xmonad
-  - [ ] Set Xmonad to my Window Manager
+  - [x] Set Xmonad to my Window Manager
 - [ ] Install nvim
   - [ ] Install nvim dependencies
   - [ ] Install nvim version v0.8.0
@@ -42,4 +42,5 @@ Use with your own responsibility, it is not intended for public use. It has many
   - [ ] Install zsh
   - [ ] set default shell to zsh
 - [ ] Install Docker
+- [ ] Install IntelliJ Toolbox
 

@@ -5,4 +5,10 @@
   tags:
     - full
     - xmonad
+
+- name: Import xmonad as window manager
+  shell: |
+    cp xmonad.xsession "{{ lookup('ansible.builtin.env', 'HOME') }}/.xsession"
+    cp xmonad.desktop /usr/share/xsessions/xmonad.desktop
+
   
