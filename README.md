@@ -27,13 +27,13 @@ Use with your own responsibility, it is not intended for public use. It has many
   - [x] Install ghcup for managing Haskell Stack and Cabal
 - [ ] Install Xmonad
   - [x] Install Dependencies
-  - [ ] Install Xmonad
+  - [x] Install Xmonad
   - [ ] Set Xmonad to my Window Manager
 - [ ] Install nvim
   - [ ] Install nvim dependencies
   - [ ] Install nvim version v0.8.0
 - [ ] Install Applications
-  - [ ] Install tmux
+  - [x] Install tmux
   - [ ] Install Google Chrome
 - [ ] Install Alacritty
   - [ ] Install Rust toolchain

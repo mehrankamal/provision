@@ -1,0 +1,8 @@
+- name: Install xmonad
+  shell: |
+    cd "{{ lookup('ansible.builtin.env', 'HOME') }}/.config/xmonad/xmonad"
+    stack install
+  tags:
+    - full
+    - xmonad
+  
