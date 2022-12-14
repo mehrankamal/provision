@@ -36,11 +36,12 @@ Use with your own responsibility, it is not intended for public use. It has many
   - [x] Install tmux
   - [ ] Install Google Chrome
 - [ ] Install Alacritty
-  - [ ] Install Rust toolchain
+  - [x] Install Rust toolchain
   - [ ] Install Alacritty using cargo
 - [ ] Install zsh
-  - [ ] Install zsh
-  - [ ] set default shell to zsh
+  - [x] Install zsh
+  - [ ] Set default shell to zsh
+  - [ ] Install and configure ohmyzsh
 - [ ] Install Docker
 - [x] Install IntelliJ Toolbox
-
+- [ ] Install OBS

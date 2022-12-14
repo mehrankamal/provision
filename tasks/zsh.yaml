@@ -1,0 +1,16 @@
+- name: Install zsh
+  become: true
+  apt:
+    name:
+      - zsh
+  tags:
+    - zsh
+    - full
+
+- name: Change default shell to zsh for my user
+  become: true
+  shell: |
+    chsh -s $(which zsh) mehrank
+  tags:
+    - zsh
+    - full
