@@ -19,6 +19,7 @@
     - golang
 
 - name: Delete installation if already exists
+  when: go_exists is failed
   become: true
   ansible.builtin.file:
     path: /usr/local/go
@@ -41,7 +42,7 @@
 - name: Add golang to path
   when: go_exists is failed
   ansible.builtin.lineinfile:
-    path: "{{ lookup('ansible.builtin.env', 'HOME') }}/.profile"
+    path: "{{ lookup('ansible.builtin.env', 'HOME') }}/.zshrc"
     line: "export PATH=$PATH:/usr/local/go/bin"
   tags:
     - full

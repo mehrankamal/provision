@@ -24,3 +24,13 @@
   tags:
     - full
     - haskell
+
+- name: Add golang to path
+  when: go_exists is failed
+  ansible.builtin.lineinfile:
+    path: "{{ lookup('ansible.builtin.env', 'HOME') }}/.zshrc"
+    line: '[ -f "/home/mehrank/.ghcup/env" ] && source "/home/mehrank/.ghcup/env"' # ghcup-env
+  tags:
+    - full
+    - haskell
+

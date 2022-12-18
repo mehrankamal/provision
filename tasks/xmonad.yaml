@@ -7,6 +7,7 @@
     - xmonad
 
 - name: Import xmonad as window manager
+  become: True
   shell: |
     cp xmonad.xsession "{{ lookup('ansible.builtin.env', 'HOME') }}/.xsession"
     cp xmonad.desktop /usr/share/xsessions/xmonad.desktop
