@@ -10,5 +10,6 @@
   shell: |
     cp xmonad.xsession "{{ lookup('ansible.builtin.env', 'HOME') }}/.xsession"
     cp xmonad.desktop /usr/share/xsessions/xmonad.desktop
-
-  
+  tags:
+    - full
+    - xmonad

@@ -35,13 +35,14 @@ Use with your own responsibility, it is not intended for public use. It has many
 - [ ] Install Applications
   - [x] Install tmux
   - [ ] Install Google Chrome
+  - [ ] Install OBS
+  - [ ] Install Kdenlive
 - [ ] Install Alacritty
   - [x] Install Rust toolchain
   - [ ] Install Alacritty using cargo
 - [ ] Install zsh
   - [x] Install zsh
-  - [ ] Set default shell to zsh
+  - [x] Set default shell to zsh
   - [ ] Install and configure ohmyzsh
 - [ ] Install Docker
 - [x] Install IntelliJ Toolbox
-- [ ] Install OBS

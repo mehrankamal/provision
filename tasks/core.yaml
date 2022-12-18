@@ -22,6 +22,65 @@
       - libxrandr-dev
       - libxss-dev              # XMonad Deps end
       - libfuse2                # Required for AppImage
+      - pkg-config              # Alacritty deps
+      - libfreetype6-dev
+      - libfontconfig1-dev
+      - libxcb-xfixes0-dev 
+      - libxkbcommon-dev        # Alacritty deps end
   tags:
     - full
     - core
+
+- name: Install haskell Dependencies
+  become: true
+  ansible.builtin.apt:
+    name:
+      - libffi-dev               ## Haskell Deps begin
+      - libffi8ubuntu1
+      - libgmp-dev
+      - libgmp10
+      - libncurses-dev
+      - libncurses5
+      - libtinfo5               ## Haskell Deps end
+  tags:
+    - full
+    - deps
+    - haskell
+
+- name: Install XMonad Deps
+  become: true
+  ansible.builtin.apt:
+    name:
+      - libx11-dev              # XMonad Deps begin
+      - libxft-dev
+      - libxinerama-dev
+      - libxrandr-dev
+      - libxss-dev              # XMonad Deps end
+  tags:
+    - full
+    - deps
+    - xmonad
+
+- name: Install Alacritty Deps
+  become: true
+  ansible.builtin.apt:
+    name:
+      - pkg-config              # Alacritty deps
+      - libfreetype6-dev
+      - libfontconfig1-dev
+      - libxcb-xfixes0-dev 
+      - libxkbcommon-dev        # Alacritty deps end
+  tags:
+    - full
+    - deps
+    - xmonad
+
+- name: Install OBS Studio Deps
+  become: True
+  ansible.builtin.apt:
+    name:
+      - ffmpeg
+  tags:
+    - full
+    - deps
+    - apps
