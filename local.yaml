@@ -26,4 +26,3 @@
     #    - include: tasks/docker.yaml
   - include: tasks/apps.yaml
   - include: tasks/zsh.yaml
-  - include: tasks/jetbrains.yaml
