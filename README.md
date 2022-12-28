@@ -29,9 +29,10 @@ Use with your own responsibility, it is not intended for public use. It has many
   - [x] Install Dependencies
   - [x] Install Xmonad
   - [x] Set Xmonad to my Window Manager
-- [ ] Install nvim
-  - [ ] Install nvim dependencies
-  - [ ] Install nvim version v0.8.0
+- [x] Install nvim
+  - [x] Install nvim dependencies
+  - [x] Install nvim version v0.8.0
+  - [x] Install telescope dependencies (i.e. ripgrep, fd)
 - [ ] Install Applications
   - [x] Install tmux
   - [ ] Install Google Chrome

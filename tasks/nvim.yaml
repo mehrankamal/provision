@@ -1,0 +1,22 @@
+- name: Install Neovim
+  become: true
+  ansible.builtin.apt:
+    name:
+      - neovim
+  tags:
+    - full
+    - nvim
+
+- name: Install ripgrep for telescope
+  shell: |
+    cargo install ripgrep
+  tags:
+    - full
+    - nvim 
+
+- name: Install fd for telescope
+  shell: |
+    cargo install fd-find
+  tags:
+    - full
+    - nvim 

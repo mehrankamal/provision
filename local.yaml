@@ -21,7 +21,7 @@
   - include: tasks/go.yaml
   - include: tasks/haskell.yaml
   - include: tasks/xmonad.yaml
-    #    - include: tasks/nvim.yaml
+  - include: tasks/nvim.yaml
     #    - include: tasks/alacritty.yaml
     #    - include: tasks/docker.yaml
   - include: tasks/apps.yaml
