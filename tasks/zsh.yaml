@@ -14,3 +14,34 @@
   tags:
     - zsh
     - full
+
+- name: Download ohmyzsh installation script
+  get_url:
+    url: https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+    dest: /tmp/zsh-install.sh
+    mode: "0755"
+    force: "yes"
+  tags:
+    - zsh
+    - full
+
+- name: Remove any existing installation of oh-my-zsh
+  ansible.builtin.file:
+    path: "{{ lookup('ansible.builtin.env', 'HOME') }}/.oh-my-zsh"
+    state: absent
+  tags:
+    - zsh
+    - full
+
+- name: Execute ohmyzsh installation script
+  shell: /tmp/zsh-install.sh
+  tags:
+    - zsh
+    - full
+
+- name: Use existing zshrc
+  shell: |
+    mv "{{ lookup('ansible.builtin.env', 'HOME') }}/.zshrc.pre-oh-my-zsh" "{{ lookup('ansible.builtin.env', 'HOME') }}/.zshrc"
+  tags:
+    - zsh
+    - full
