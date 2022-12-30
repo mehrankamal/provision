@@ -1,0 +1,46 @@
+- name: Clone Alacritty repo
+  ansible.builtin.git:
+    repo: "https://github.com/alacritty/alacritty.git"
+    dest: "{{ lookup('ansible.builtin.env', 'HOME') }}/dev/provision-repos/alacritty"
+  tags:
+    - full
+    - alacritty 
+
+- name: Build Alacritty binary
+  shell: |
+    cd "{{ lookup('ansible.builtin.env', 'HOME') }}/dev/provision-repos/alacritty"
+    cargo build --release
+  tags:
+    - full
+    - alacritty 
+
+- name: Copy terminal to /usr/local/bin directory
+  become: true
+  copy:
+    src: "{{ lookup('ansible.builtin.env', 'HOME') }}/dev/provision-repos/alacritty/target/release/alacritty"
+    dest: "/usr/local/bin/alacritty"
+    mode: "0111"
+  tags:
+    - full
+    - alacritty
+
+- name: Install terminfo for Alacritty
+  become: true
+  shell: |
+    cd "{{ lookup('ansible.builtin.env', 'HOME') }}/dev/provision-repos/alacritty"
+    tic -xe alacritty,alacritty-direct extra/alacritty.info
+  tags:
+    - full
+    - alacritty
+
+- name: Install Desktop Entry for Alacritty
+  become: true
+  shell: |
+    cd "{{ lookup('ansible.builtin.env', 'HOME') }}/dev/provision-repos/alacritty"
+    cp extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg
+    desktop-file-install extra/linux/Alacritty.desktop
+    update-desktop-database
+  tags:
+    - full
+    - alacritty
+

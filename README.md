@@ -39,9 +39,9 @@ Use with your own responsibility, it is not intended for public use. It has many
   - [x] Install OBS
   - [x] Install Kdenlive
   - [x] Install IntelliJ Toolbox
-- [ ] Install Alacritty
+- [x] Install Alacritty
   - [x] Install Rust toolchain
-  - [ ] Install Alacritty using cargo
+  - [x] Install Alacritty using cargo
 - [x] Install zsh
   - [x] Install zsh
   - [x] Set default shell to zsh
