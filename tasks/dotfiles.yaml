@@ -2,6 +2,7 @@
   ansible.builtin.git:
     repo: "git@github.com:mehrankamal/.dotfiles.git"
     dest: "{{ lookup('ansible.builtin.env', 'HOME') }}/.dotfiles"
+    force: yes
   tags:
     - full
     - dotfiles

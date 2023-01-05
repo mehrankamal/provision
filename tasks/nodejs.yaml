@@ -1,0 +1,45 @@
+- name: Install correct version of Node
+  shell: n lts
+  tags:
+    - install
+    - nodejs
+
+- name: Install Yarn
+  npm:
+    name: yarn
+    global: yes
+  tags:
+    - full
+    - nodejs
+
+- name: Install eslint
+  npm:
+    name: eslint
+    global: yes
+  tags:
+    - full
+    - nodejs
+
+- name: Install Typescript server
+  npm:
+    name: typescript-language-server
+    global: yes
+  tags:
+    - full
+    - nodejs
+
+- name: Install Typescript
+  npm:
+    name: typescript
+    global: yes
+  tags:
+    - full
+    - nodejs
+
+- name: Install TS-Node
+  npm:
+    name: ts-node
+    global: yes
+  tags:
+    - full
+    - nodejs

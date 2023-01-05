@@ -1,0 +1,26 @@
+- name: Check if n is already installed
+  shell: command -v n
+  register: n_exists
+  ignore_errors: yes
+  tags:
+    - full
+    - nodejs
+
+- name: Download n-install script
+  when: n_exists is failed
+  get_url:
+    url: https://bit.ly/n-install
+    dest: /tmp/n-install
+    mode: '0755'
+    force: 'yes'
+  tags:
+    - full
+    - nodejs
+
+- name: Install N version manager
+  when: n_exists is failed
+  shell: /tmp/n-install -y
+  tags:
+    - full
+    - nodejs
+
