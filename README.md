@@ -32,7 +32,7 @@ Use with your own responsibility, it is not intended for public use. It has many
 - [x] Setup Nodejs and Typescript environment
   - [x] Install n, the version manager for node
   - [x] Install latest lts version of Nodejs with n
-  - [x] Install yarn, eslint, typescript-language-server, typescript and ts-node globally through npm
+  - [x] Install `yarn`, `eslint`, `typescript-language-server`, `typescript` and `ts-node` as CLI tools through npm
 - [x] Install nvim
   - [x] Install nvim dependencies
   - [x] Install nvim version v0.8.0
