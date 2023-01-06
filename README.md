@@ -6,6 +6,11 @@
 3. Clone this repository
 2. For full installation use `ansible-playbook -t full --ask-become-pass --ask-vault-pass -vvv local.yaml`
 
+## Note:
+
+> This provision setup is intended to be used for ubuntu for the time being, until I start distro/os hopping.
+
+
 ## Warning:
 
 Use with your own responsibility, it is not intended for public use. It has many of personal chioces that may not be suitable for others use
