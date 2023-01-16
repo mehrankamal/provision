@@ -6,6 +6,11 @@
 3. Clone this repository
 2. For full installation use `ansible-playbook -t full --ask-become-pass --ask-vault-pass -vvv local.yaml`
 
+## Note:
+
+> This provision setup is intended to be used for ubuntu for the time being, until I start distro/os hopping.
+
+
 ## Warning:
 
 Use with your own responsibility, it is not intended for public use. It has many of personal chioces that may not be suitable for others use
@@ -32,7 +37,7 @@ Use with your own responsibility, it is not intended for public use. It has many
 - [x] Setup Nodejs and Typescript environment
   - [x] Install n, the version manager for node
   - [x] Install latest lts version of Nodejs with n
-  - [x] Install yarn, eslint, typescript-language-server, typescript and ts-node globally through npm
+  - [x] Install `yarn`, `eslint`, `typescript-language-server`, `typescript` and `ts-node` as CLI tools through npm
 - [x] Install nvim
   - [x] Install nvim dependencies
   - [x] Install nvim version v0.8.0
