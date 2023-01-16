@@ -43,6 +43,7 @@ Use with your own responsibility, it is not intended for public use. It has many
   - [x] Install OBS
   - [x] Install Kdenlive
   - [x] Install IntelliJ Toolbox
+  - [ ] Install (Bazelisk)[https://github.com/bazelbuild/bazelisk]
 - [x] Install Alacritty
   - [x] Install Rust toolchain
   - [x] Install Alacritty using cargo
