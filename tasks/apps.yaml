@@ -79,3 +79,24 @@
     - jetbrains
     - apps
 
+- name: Check if bazel is already installed
+  shell: command -v bazel
+  register: bazel_exists
+  ignore_errors: yes
+  tags: 
+    - full
+    - bazel
+    - apps
+
+- name: Install bazel
+  when: bazel_exists is failed
+  become: true
+  get_url:
+    url: "https://github.com/bazelbuild/bazelisk/releases/download/v1.15.0/bazelisk-linux-amd64"
+    dest: "/usr/local/bin/bazel"
+    mode: '0555'
+  tags: 
+    - full
+    - bazel
+    - apps
+
