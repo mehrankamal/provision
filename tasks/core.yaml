@@ -9,6 +9,7 @@
       - git
       - make
       - curl
+      - stow
   tags:
     - full
     - core
