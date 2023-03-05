@@ -56,7 +56,7 @@
   tags:
     - full
     - deps
-    - xmonad
+    - alacritty
 
 - name: Install OBS Studio Deps
   become: True

@@ -14,3 +14,14 @@
   tags:
     - full
     - xmonad
+
+       
+- name: Install xmobar
+  become: True
+  ansible.builtin.apt:
+    name:
+      - xmobar
+  tags:
+    - full
+    - xmonad
+
