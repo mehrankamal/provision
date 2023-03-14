@@ -1,0 +1,8 @@
+- name: Install system packages
+  become: true
+  ansible.builtin.apt:
+    name:
+      - awesome
+  tags:
+    - full
+    - awesome

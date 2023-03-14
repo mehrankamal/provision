@@ -21,6 +21,7 @@
   - include: tasks/go.yaml
   - include: tasks/haskell.yaml
     #  - include: tasks/xmonad.yaml
+  - include: tasks/awesome.yaml
   - include: tasks/n.yaml
   - include: tasks/nodejs.yaml
   - include: tasks/nvim.yaml
