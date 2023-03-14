@@ -1,4 +1,4 @@
-- name: Install system packages
+- name: Install Awesome WM
   become: true
   ansible.builtin.apt:
     name:
